@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshetri Samaj - Nepali Kshetri Community</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Kshetri Samaj</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-4 px-2 text-red-600 border-b-4 border-red-600 font-semibold">Home</a>
+                    <a href="news.php" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">News</a>
+                    <a href="events.php" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Events</a>
+                    <a href="gallery.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Gallery</a>
+                    <a href="videos.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Videos</a>
+                    <a href="membership.php" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Membership</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-red-600 h-96 flex items-center justify-center">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Kshetri Samaj of Nepal</h1>
+            <p class="text-xl text-white mb-8">Preserving our heritage, building our future</p>
+            <a href="membership.php" class="bg-white text-red-600 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">Join Our Community</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">About Kshetri Community</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="text-gray-700 mb-4">The Kshetri community, also known as Chhetri, is one of the largest ethnic groups in Nepal, known for their rich cultural heritage and significant contributions to Nepali society.</p>
+                    <p class="text-gray-700 mb-4">Our community values include bravery, honesty, and strong family bonds, which have been passed down through generations.</p>
+                    <p class="text-gray-700">This platform serves as a hub for Kshetri people worldwide to connect, share knowledge, and preserve our traditions.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Quick Facts</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>One of Nepal's largest ethnic groups</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Traditional occupation: Military and agriculture</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Major festivals: Dashain, Tihar, Maghe Sankranti</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-red-600 mt-1 mr-2"></i>
+                            <span>Distinct cultural dress: Daura Suruwal for men, Gunyu Cholo for women</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
