@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Kshetri Samaj</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Kshetri Samaj</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Home</a>
+                    <a href="news.php" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">News</a>
+                    <a href="events.php" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Events</a>
+                    <a href="gallery.html" class="py-4 px-2 text-red-600 border-b-4 border-red-600 font-semibold">Gallery</a>
+                    <a href="videos.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Videos</a>
+                    <a href="membership.php" class="py-4 px-2 text-gray-500 font-semibold hover:text-red-600 transition duration-300">Membership</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Kshetri Community Gallery</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button class="px-4 py-2 bg-red-600 text-white rounded-full filter-btn active" data-filter="all">All</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full filter-btn" data-filter="festivals">Festivals</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full filter-btn" data-filter="events">Events</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full filter-btn" data-filter="culture">Culture</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Sample gallery items (would be dynamic in production) -->
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="festivals">
+                    <img src="https://images.pexels.com/photos/169188/pexels-photo-169188.jpeg" 
+                         alt="Dashain Festival" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Dashain Celebration</h3>
+                        <p class="text-gray-600 text-sm">October 2023</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="events">
+                    <img src="https://images.pexels.com/photos/274131/pexels-photo-274131.jpeg" 
+                         alt="Community Meeting" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Annual Meeting</h3>
+                        <p class="text-gray-600 text-sm">March 2023</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="culture">
+                    <img src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg" 
+                         alt="Traditional Dance" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Cultural Dance</h3>
+                        <p class="text-gray-600 text-sm">September 2023</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="festivals">
+                    <img src="https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg" 
+                         alt="Tihar Festival" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Tihar Lights</h3>
+                        <p class="text-gray-600 text-sm">November 2023</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="events">
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg" 
+                         alt="Youth Conference" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Youth Conference</h3>
+                        <p class="text-gray-600 text-sm">July 2023</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="culture">
+                    <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg" 
+                         alt="Traditional Dress" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Traditional Attire</h3>
+                        <p class="text-gray-600 text-sm">January 2024</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="festivals">
+                    <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg" 
+                         alt="Maghe Sankranti" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Maghe Sankranti</h3>
+                        <p class="text-gray-600 text-sm">January 2024</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden" data-category="events">
+                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" 
+                         alt="Community Service" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="font-semibold text-lg">Community Service</h3>
+                        <p class="text-gray-600 text-sm">May 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kshetri Samaj</h3>
+                    <p class="text-gray-300">Preserving Kshetri heritage and connecting our global community.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="news.php" class="text-gray-300 hover:text-white">News</a></li>
+                        <li><a href="events.php" class="text-gray-300 hover:text-white">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-gray-300"><i class="fas fa-envelope mr-2"></i> info@khsetrisamaj.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <?php echo date("Y"); ?> Kshetri Samaj. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gallery filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-red-600', 'text-white'));
+                filterButtons.forEach(btn => btn.classList.add('bg-gray-200', 'text-gray-700'));
+                button.classList.add('active', 'bg-red-600', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                // Filter items
+                const filter = button.dataset.filter;
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
